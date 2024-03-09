@@ -218,15 +218,102 @@ body {
 
 /* HOME */
 
-.card {
-    margin: 10px auto;
-    border-radius: 20px;
+/*Banner Section*/
+
+.banner-area {
+    background-color: white;
+    background-image: url(/images/banner-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-area-title {
+    color: #4A0674;
+    margin-bottom: 60px;
+    padding: 15px;
+    text-align: left;
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.search-bar {
+
+    box-shadow: 3px 3px 20px 2px gray;
+    background-color: #cccccc;
+    background-image: linear-gradient(gray, white);
+    border-radius: 28px;
+    border-style: solid;
+    border-color: gray;
+    color: #4A067;
+    width: 95%;
+    height: 60px;
+    margin: 20px auto 10px auto;
+    font-family: "Roboto";
+    padding: 10px;
+}
+
+/*Cards-Section*/
+
+.option-card-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    padding-top: 50px;
+    margin: 0;
+    
+}
+
+    .option-card-area h1 {
+        color: #5B2180
+    }
+
+.option-cards-row {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    }
+
+.option-card {
+     
+    align-items:center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    width: 160px;
+    background-color: #5B2180;
+    margin: 12px;
+    border-radius: 15px;
     padding: 25px;
-    box-shadow: 0px 1px 5px #aaaaaa;
+
 }
+
+.option-card p1 {
+
+    text-align: center;
+    color: white;
+    font-family: "Roboto";
+    padding: 10px;
+}
+
+
+
+
+
+    .card {
+        margin: 10px auto;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 25px;
+        box-shadow: 0px 1px 5px #aaaaaa;
+    }
 
     .card img {
         height: 70px;
