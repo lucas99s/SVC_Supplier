@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="index-logo-section">
+        <div class="logo-container">
+            <img class="logo" src="">
+        </div>
+    </div>
+
+    <div class="acess-area">
+
+        <div class="button-section">
+            <p>Já tem uma conta?</p>
+            <a class="button-style" asp-controller="Account" asp-action="Login">Entrar</a>
+        </div>
+
+        <div class="button-section">
+            <p>Primeira vez por aqui?</p>
+            <a class="button-style" asp-controller="Account" asp-action="SignIn">Cadastrar</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

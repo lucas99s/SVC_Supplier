@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SVC_Supplier</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+    </header>
+    <div class="app-container">
+        <main role="main" class="pb-3">
+            <div class="app-header">
+                <div class="app-nav">
+                    <img class="simple-logo" src="~/images/Logo-simple-white.png"/>
+                </div>
+            </div>
+            @RenderBody()
+        </main>
+        <div class="footer-navbar">
+            <div class="footer-nav-button">
+                <a asp-controller="Home" asp-action="Index" class="nav-button">
+                    <img src="~/images/home.png" />
+                    <h5>Home</h5>
+                </a>
+            </div>
+            <div class="footer-nav-button">
+                <div class="nav-button">
+                    <img src="~/images/historico.png" />
+                    <h5>Pedidos</h5>
+                </div>
+            </div>
+            <div class="footer-nav-button">
+                <div class="nav-button">
+                    <img src="~/images/shop-basket.png" />
+                    <h5>Ofertar</h5>
+                </div>
+            </div>
+            <a asp-controller="Home" asp-action="Profile" class="footer-nav-button">
+                <div class="nav-button">
+                    <img src="~/images/profile.png" />
+                    <h5>Perfil</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

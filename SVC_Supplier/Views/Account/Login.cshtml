@@ -1,0 +1,54 @@
+﻿@model SVC_Supplier.Models.UserModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="login-header">
+
+        <div class="login-nav">
+            <a class="return-icon" href="~/Account/Index">
+                <img src="~/images/return-simbol.png" />
+            </a>
+        </div>
+
+    </div>
+
+    @if(ViewBag.NewRegistration != null)
+    {
+        <span class="text-info">@ViewBag.NewRegistration</span>
+    }
+
+    <div class="login-logo-section">
+        <img src="~/images/..." />
+    </div>
+    <div class="login-form-section">
+        <form action="/Account/Login" method="post" class="login-form-field">
+            <label class="hidden-element">Email</label>
+            <input class="login-form-input" type="email" placeholder="E-mail" asp-for="Email" />
+            @if (ViewBag.EmailMessage != null)
+            {
+                <span class="text-danger">@ViewBag.EmailMessage</span>
+            }
+            <label class="hidden-element">Senha</label>
+            <input class="login-form-input" type="password" placeholder="Senha" asp-for="Password" />
+            @if (ViewBag.PasswordMessage != null)
+            {
+                <span class="text-danger">@ViewBag.PasswordMessage</span>
+            }
+            <p class="pwd-recovery">Esqueci minha senha...</p>
+            <input class="button-style" type="submit" value="ENTRAR" />
+        </form>
+    </div>
+
+</body>
+</html>

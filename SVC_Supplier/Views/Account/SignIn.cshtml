@@ -1,0 +1,62 @@
+﻿@model SVC_Supplier.Models.UserModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignIn</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <div class="app-header">
+
+        <div class="app-nav">
+            <a class="return-icon" href="~/Account/Index">
+                <img src="~/images/return-simbol.png"/>
+            </a>
+            <img class="simple-logo" src="~/images/logo-simple.svg"/>
+        </div>
+
+        <p class="signin-text">Bem vindo(a)!</p>
+
+    </div>
+
+    <div class="signin-form-section">
+        <p class="signin-text-2">Para realizar seu cadastro, preencha os dados abaixo</p>
+
+        <form action="/Account/SignIn" method="post" class="signin-form-field">
+            <label class="form-label-style">Nome</label>
+            <input class="signin-form-field-style" type="text" placeholder="Informe seu nome" asp-for="Name" />
+
+            <label class="form-label-style">Sobrenome</label>
+            <input class="signin-form-field-style" type="text" placeholder="Informe seu sobrenome" asp-for="SurName" />
+            
+            <label class="form-label-style">E-mail</label>
+            <input class="signin-form-field-style" type="email" placeholder="Informe seu e-mail" asp-for="Email" />
+
+            @if (ViewBag.UserMessage != null)
+            {
+                <span class="text-danger">@ViewBag.UserMessage</span>
+            }
+            
+            <label class="form-label-style">Senha</label>
+            <input class="signin-form-field-style" type="password" placeholder="Informe sua senha" asp-for="Password" />
+
+            <label class="form-label-style">Confirmar a senha</label>
+            <input class="signin-form-field-style" type="password" placeholder="Confirme sua senha" asp-for="PasswordConfirmation" />
+            @if (ViewBag.PasswordMessage != null)
+            {
+                <span class="text-danger">@ViewBag.PasswordMessage</span>
+            }
+            <input class="signin-button-style" type="submit" value="Registrar" />
+        </form>
+    </div>
+
+</body>
+</html>
