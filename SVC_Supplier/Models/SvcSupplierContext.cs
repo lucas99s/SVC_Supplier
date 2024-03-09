@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Security.Policy;
 
 namespace SVC_Supplier.Models
 {
     public class SvcSupplierContext : DbContext
     {
         public DbSet<UserDb> Users { get; set; }
+        public DbSet<ProductDb> Products { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             string workingDirectory = Directory.GetCurrentDirectory();

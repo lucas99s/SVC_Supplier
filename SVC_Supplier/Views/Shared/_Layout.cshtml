@@ -27,23 +27,23 @@
                 </a>
             </div>
             <div class="footer-nav-button">
-                <div class="nav-button">
+                <a asp-controller="Products" asp-action="Orders" class="nav-button">
                     <img src="~/images/historico.png" />
                     <h5>Pedidos</h5>
-                </div>
+                </a>
             </div>
             <div class="footer-nav-button">
-                <div class="nav-button">
+                <a asp-controller="Sell" asp-action="Index" class="nav-button">
                     <img src="~/images/shop-basket.png" />
                     <h5>Ofertar</h5>
-                </div>
+                </a>
             </div>
-            <a asp-controller="Home" asp-action="Profile" class="footer-nav-button">
-                <div class="nav-button">
+            <div class="footer-nav-button">
+                <a asp-controller="Profile" asp-action="Index"  class="nav-button">
                     <img src="~/images/profile.png" />
                     <h5>Perfil</h5>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
