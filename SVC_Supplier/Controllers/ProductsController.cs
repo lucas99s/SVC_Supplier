@@ -89,5 +89,10 @@ namespace SVC_Supplier.Controllers
         {
             return View();
         }
+
+        public IActionResult PaymentConfirmation()
+        {
+            return View();
+        }
     }
 }
