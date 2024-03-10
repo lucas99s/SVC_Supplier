@@ -50,7 +50,10 @@
         </div>
        
         <div class="product-button-area">
-            <button class="button-purple" type="button">Efetuar Pedido</button>
+            <form asp-controller="Products" asp-action="Payment">
+                <input type="hidden" value="@Model.Id" name="productId" />
+                <button class="button-purple" type="submit">Efetuar Pedido</button>
+            </form>
             <button class="button-gray" type="button">Enviar Mensagem</button>
 
         </div>
