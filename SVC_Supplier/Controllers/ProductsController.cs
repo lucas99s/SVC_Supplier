@@ -16,7 +16,8 @@ namespace SVC_Supplier.Controllers
 
                 if (!String.IsNullOrEmpty(searchString))
                 {
-                    products = products.Where(s => s.Name.Contains(searchString) || s.Brand.Contains(searchString));
+                    string searchLower = searchString.ToLower();
+                    products = products.Where(s => s.Name.ToLower().Contains(searchLower) || s.Brand.ToLower().Contains(searchLower));
                 }
 
                 productDbList = products.ToList();
@@ -37,14 +38,37 @@ namespace SVC_Supplier.Controllers
                 };
             }).ToList();
 
+            ViewBag.SearchBar = searchString;
+
             return View(productModelList);
         }
 
 
-        public IActionResult Product()
+        public IActionResult Product(int productId)
         {
-            return View();
+            ProductDb productDb;
+
+            using (var context = new SvcSupplierContext())
+            {
+                productDb = context.Products.FirstOrDefault(p => p.Id == productId);
+            }
+
+            ProductModel productModel = new ProductModel()
+            {
+                Id = productDb.Id,
+                Name = productDb.Name,
+                Brand = productDb.Brand,
+                Department = productDb.Department,
+                Description = productDb.Description,
+                Price = productDb.Price,
+                UnitsInLot = productDb.UnitsInLot,
+                ImagePath = productDb.ImagePath
+            };
+
+            return View(productModel);
         }
+
+
 
         public IActionResult Message()
         {
