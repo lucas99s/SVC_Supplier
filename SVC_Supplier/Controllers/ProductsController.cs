@@ -126,6 +126,10 @@ namespace SVC_Supplier.Controllers
         {
             return RedirectToAction("Index");
         }
-    }
 
+        public IActionResult PaymentConfirmation()
+        {
+            return View();
+        }
+    }
 }
