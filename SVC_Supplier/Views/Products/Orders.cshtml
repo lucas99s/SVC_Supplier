@@ -5,14 +5,7 @@
 @model List<ProductModel>
 
 <div>
-    <section class="product-search-bar-area">
-        <form asp-controller="Products" asp-action="Index" class="search-bar-form">
-            <input class="search-bar" type="text" name="searchString" placeholder="Buscar..." value="@ViewBag.SearchBar">
-            <input class="search-bar-button" type="submit" value="Pesquisar" />
-        </form>
-
-        <h1>Produtos</h1>
-    </section>
+    
     @foreach (var product in Model)
     {
         <form asp-action="Product" class="product-card-area">
@@ -49,6 +42,11 @@
 
         </form>
     }
+
+    <section class="finished-orders">
+        <h1>Pedidos Pendentes</h1>
+        <p>Nenhum registro encontrado</p>
+    </section>
 
     <section class="finished-orders">
         <h1>Pedidos Encerrados</h1>
