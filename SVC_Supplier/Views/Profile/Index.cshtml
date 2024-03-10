@@ -2,8 +2,28 @@
     ViewData["Title"] = "Perfil";
 }
 
-<div>
+
     <section class="services-container">
-        <h1>Perfil</h1>
-    </section>
-</div>
+
+    <p class="profile-title">Bem Vindo, Empresa S.A!</p>
+
+    <div class="menu-option">
+        <h5>Dados pessoais</h5>
+        <img src="~/images/arrow-icon.png" />
+    </div>
+    <div class="menu-option">
+        <h5>Notificações</h5>
+        <img src="~/images/arrow-icon.png" />
+    </div>
+    <div class="menu-option">
+        <h5>Pagamentos</h5>
+        <img src="~/images/arrow-icon.png" />
+    </div>
+    <div class="menu-option">
+        <h5>Conversas</h5>
+        <img src="~/images/arrow-icon.png" />
+    </div>
+    <a asp-controller="Account" asp-action="Index" class="menu-option">
+        <h5>Sair</h5>
+    </a>
+</section>
