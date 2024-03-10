@@ -629,25 +629,162 @@ body {
     padding: 3px;
 }
 
-.card {
+/* Configuração da Tela de Pagamento*/
+
+.payment-card-area {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+.payment-card-area h1 {
+   
+    padding:15px;
+    margin-right: 150px;
+    font-size: 23px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.payment-product-card {
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 3px gray;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: auto;
+    margin: 15px;
+}
+
+.image-plus-information {
+    display: flex;
+    flex-direction: row;
+    height: 144px;
+}
+
+.payment-card-image-area {
+    background-image: url(/images/product-cimento.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px 0px 0px 10px;
+    height: 144px;
+    width: 140px;
+}
+
+.payment-card-information-area {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 240px;
+    height: 144px;
+}
+
+    .payment-card-information-area h2 {
+        font-size: 16px;
+        color: #4A0674;
+        margin: 0;
+    }
+
+    .payment-card-information-area h3 {
+        font-size: 14px;
+        color: #7C7C7C;
+        margin: 0;
+    }
+
+.payment-quantity-area {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+    .payment-quantity-area p {
+        color: #7C7C7C;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+.payment-quantity-counter {
+    width: 60px;
+    height: 20px;
+    background-color: #E2E2E2;
+    margin-left: 10px;
+    border-style: none;
+}
+
+.payment-avaliation-price{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.payment-price-area{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.total-value {
+    color: #7C7C7C;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.payment-pricing{
+    color: black;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/*Cards de formas de pagamento*/
+
+.payment-forms h1 {
+    margin: 30px;
+    font-size: 23px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.payment-option-card {
     margin: 10px auto;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 25px;
+    padding:10px;
     box-shadow: 0px 1px 5px #aaaaaa;
+    width: 375px;
+    margin: 20px;
 }
 
-    .card img {
-        height: 70px;
-        width: 70px;
-    }
+.payment-option-icons {
+    padding: 10px;
+}
 
-    .card h3 {
-        font-size: 35px;
-        margin-left: 20px;
-    }
+.payment-option-text {
+    display: flex;
+    color: #5B2180;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 35px;
+    margin-left: 20px;
+}
 
 .services-container {
     margin: 20px 40px 70px 40px;
