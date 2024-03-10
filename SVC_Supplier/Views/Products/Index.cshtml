@@ -2,49 +2,51 @@
     ViewData["Title"] = "Produtos";
 }
 
+@model List<ProductModel>
+
 <div>
     <section class="product-search-bar-area">
-        <input class="search-bar" type="text" placeholder="Buscar..">
+        <form asp-controller="Products" asp-action="Index" class="search-bar-form">
+            <input class="search-bar" type="text" name="searchString" placeholder="Buscar..." value="@ViewBag.SearchBar">
+            <input class="search-bar-button" type="submit" value="Pesquisar" />
+        </form>
 
         <h1>Produtos</h1>
     </section>
+    @foreach(var product in Model)
+    {
+        <section class="product-card-area">
+            <div class="product-card">
+                
+                <img class="product-card-image-area" src="@product.ImagePath"/>
+                <div class="product-card-information-area">
+                        <h2>@product.Name</h2>
+                        <h3>@product.Brand</h3>
 
-    <section class="product-card-area">
+                        <div class="avaliation-subarea">
 
-        <div class="product-card">
-
-            <div class="product-card-image-area">
-               
-            </div>
-
-            <div class="product-card-information-area">
-
-                    <h2>Cimento Nacional</h2>
-                    <h3>Cimento Nacional</h3>
-
-                    <div class="avaliation-subarea">
-
-                        <p>Avaliações</p>
-                        <div>
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                        </div>
+                            <p>Avaliações</p>
+                            <div>
+                                <img class="star-icon" src="/images/star-icon.svg" />
+                                <img class="star-icon" src="/images/star-icon.svg" />
+                                <img class="star-icon" src="/images/star-icon.svg" />
+                                <img class="star-icon" src="/images/star-icon.svg" />
+                                <img class="star-icon" src="/images/star-icon.svg" />
+                            </div>
                         
-                    </div>
+                        </div>
 
-                    <p class="sold-units">1.500 Unidades vendidas</p>
+                        <p class="sold-units">@product.SoldUnits Unidades vendidas</p>
 
-                    <div class="price-area">
-                    <p class="pricing">R$</p>
-                    <p class ="pricing">249,99</p>
-                    <p class="lot-text">/lotes: 12 unidades</p>
-                    </div>
+                        <div class="price-area">
+                        <p class="pricing">R$</p>
+                        <p class ="pricing">@product.Price</p>
+                        <p class="lot-text">/lotes: @product.UnitsInLot unidades</p>
+                        </div>
+                </div>
+
             </div>
 
-        </div>
-
-    </section>
+        </section>
+    }
 </div>

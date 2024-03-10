@@ -16,7 +16,8 @@ namespace SVC_Supplier.Controllers
 
                 if (!String.IsNullOrEmpty(searchString))
                 {
-                    products = products.Where(s => s.Name.Contains(searchString) || s.Brand.Contains(searchString));
+                    string searchLower = searchString.ToLower();
+                    products = products.Where(s => s.Name.ToLower().Contains(searchLower) || s.Brand.ToLower().Contains(searchLower));
                 }
 
                 productDbList = products.ToList();
@@ -36,6 +37,8 @@ namespace SVC_Supplier.Controllers
                     ImagePath = p.ImagePath
                 };
             }).ToList();
+
+            ViewBag.SearchBar = searchString;
 
             return View(productModelList);
         }

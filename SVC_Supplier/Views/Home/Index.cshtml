@@ -6,7 +6,10 @@
     <section class="banner-area">
 
         <h1 class="banner-area-title">Olá,<br /> como podemos<br /> te ajudar?</h1>
-        <input class="search-bar" type="text" placeholder="Buscar..">
+        <form asp-controller="Products" asp-action="Index" class="search-bar-form">
+            <input class="search-bar" type="text" name="searchString" placeholder="Buscar..." value="@ViewBag.SearchBar">
+            <input class="search-bar-button" type="submit" value="Pesquisar" />
+        </form>
 
     </section>
 

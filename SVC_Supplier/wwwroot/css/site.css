@@ -241,8 +241,13 @@ body {
     font-weight: 800;
 }
 
-.search-bar {
+.search-bar-form {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+}
 
+.search-bar {
     box-shadow: 3px 3px 20px 2px gray;
     background-color: #cccccc;
     background-image: linear-gradient(gray, white);
@@ -250,11 +255,26 @@ body {
     border-style: solid;
     border-color: gray;
     color: #4A0674;
-    width: 95%;
-    height: 60px;
+    width: 100%;
+    height: 40px;
     margin: 20px auto 10px auto;
     font-family: "Roboto";
     padding: 10px;
+}
+
+.search-bar-button {
+    position: absolute;
+    height: 40px;
+    border-radius: 0 20px 20px 0;
+    padding: 0 15px;
+    right: 0;
+    top: 20px;
+    right: 0px;
+    border: none;
+    background: #5B2180;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px
 }
 
 /*Cards-Section*/
@@ -266,7 +286,6 @@ body {
     height: 500px;
     padding-top: 50px;
     margin: 0;
-    
 }
 
     .option-card-area h1 {
@@ -340,13 +359,12 @@ body {
 }
 
 .product-card-image-area {
-    background-image: url(/images/product-cimento.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 10px 0px 0px 10px;
-    height: 100%;
+    padding: 20px 0px 0px 0px;
     width: 140px;
+    height: 120px;
 }
 
 .product-card-information-area {
