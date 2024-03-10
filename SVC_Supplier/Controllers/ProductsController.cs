@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using SVC_Supplier.Models;
 
@@ -85,9 +86,46 @@ namespace SVC_Supplier.Controllers
             return View();
         }
 
-        public IActionResult Payment()
+        public IActionResult Payment(int productId)
+        { 
+            ProductDb productDb;
+
+            using (var context = new SvcSupplierContext())
+            {
+                productDb = context.Products.FirstOrDefault(p => p.Id == productId);
+            }
+
+            ProductModel productModel = new ProductModel()
+            {
+                Id = productDb.Id,
+                Name = productDb.Name,
+                Brand = productDb.Brand,
+                Department = productDb.Department,
+                Description = productDb.Description,
+                Price = productDb.Price,
+                UnitsInLot = productDb.UnitsInLot,
+                ImagePath = productDb.ImagePath
+            };
+
+            return View(productModel);
+        }
+        public IActionResult DataPaymentForm()
         {
             return View();
         }
+
+        public IActionResult BuyItems(
+            string address,
+            int number,
+            string zipCode,
+            string cardNumber,
+            string nameOnCard,
+            string validDate,
+            int code
+        )
+        {
+            return RedirectToAction("Index");
+        }
     }
+
 }

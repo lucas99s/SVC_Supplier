@@ -2,6 +2,8 @@
     ViewData["Title"] = "Pagamento";
 }
 
+@model ProductModel
+
 <div>
     
     <section class="payment-card-area">
@@ -12,19 +14,19 @@
 
             <div class="image-plus-information">
 
-                <div class="payment-card-image-area"></div>
+                <img class="payment-card-image-area" src="@Model.ImagePath" />
 
                 <div class="payment-card-information-area">
 
-                    <h2>Cimento Nacional</h2>
-                    <h3>Cimento Nacional</h3>
+                    <h2>@Model.Name</h2>
+                    <h3>@Model.Brand</h3>
 
                     <div class="payment-quantity-area">
                         <p>Quantidade:</p>
                         <input class="payment-quantity-counter" type="text" />
                     </div>
 
-                    <p class="lot-text">/lotes: 12 unidades</p>
+                    <p class="lot-text">/lotes: @Model.UnitsInLot unidades</p>
 
                 </div>
 
@@ -45,14 +47,14 @@
 
                 </div>
 
-                <p class="sold-units">1.500 Unidades vendidas</p>
+                <p class="sold-units">@Model.SoldUnits Unidades vendidas</p>
 
             </div>
 
             <div class="payment-price-area">
                 <p class="total-value">Valor Total:</p>
                 <p class="payment-pricing">R$</p>
-                <p class="payment-pricing">249,99</p>
+                <p class="payment-pricing">@Model.Price</p>
             </div>
 
         </div>
@@ -75,8 +77,10 @@
     </section>
 
     <section class="product-button-area">
-        <button class="button-purple" type="button">Realizar Pagamento</button>
+        <a href="@Url.Action("DataPaymentForm", "Products", new { productId = Model.Id })" class="button-purple" onclick="realizarPagamento()">Realizar Pagamento</a>
     </section>
-    
 
 </div>
+
+<script>
+</script>
