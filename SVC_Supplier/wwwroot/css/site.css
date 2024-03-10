@@ -781,6 +781,36 @@ body {
     align-items: center;
 }
 
+/* Página - Envie Sua Mensagem*/
+
+.send-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-message-title {
+    padding-right: 100px;
+    margin: 25px;
+    font-size: 23px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.send-message-text-area {
+    
+    height: 550px;
+    margin-bottom: 20px;
+    width: 370px;
+
+    border-radius: 10px;
+    border-color: #E2E2E2;
+    border-style: solid;
+}
+
+
+
 .card h3 {
     font-size: 35px;
     margin-left: 20px;
