@@ -323,7 +323,7 @@ body {
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 600px;
+    height: auto;
 }
 
 .product-card {
@@ -415,16 +415,229 @@ body {
     padding-top:5px;
 }
 
+/*Página de pedidos ativos*/
+.finished-orders{
+    padding: 20px;
+}
+.finished-orders h1 {
+    margin-top: 30px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
 
-    .card {
-        margin: 10px auto;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 25px;
-        box-shadow: 0px 1px 5px #aaaaaa;
-    }
+.finished-orders p{
+    display:flex;
+    justify-content: center;
+    padding:10px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+/*Página de detalhes do Produto*/
+
+.product-main-banner-area {
+    height: 250px;
+    width: auto;
+    background-image: url(/images/product-cimento.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.product-main-information{
+    padding: 20px;
+}
+
+.product-main-information h2 {
+    font-size: 23px;
+    color: #4A0674;
+    margin: 0;
+}
+
+.product-main-information h3 {
+    font-size: 18px;
+    color: #7C7C7C;
+    margin-bottom: 15px;
+}
+
+.product-main-information h4 {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-avaliation {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.avaliation-title{
+    padding: 10px;
+    margin:0px;
+    color: black;
+    font-weight: 600;
+
+}
+
+.product-avaliation-description {
+    color: black;
+    font-size: 15px;
+    padding: 0px 10px 0px 0px;
+    margin: 0;
+}
+
+.product-star-icon {
+    height: auto;
+    width: 14px;
+    padding-top: 15px;
+}
+
+.sold-units-product {
+    color: gray;
+    font-size: 17px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/*Area de preço e botoes*/
+
+.pricing-and-options-area{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+    height: auto;
+}
+
+.price-and-quantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-pricing-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.product-value{
+    display:flex;
+    flex-direction: column;
+}
+
+.product-pricing {
+    padding: 5px;
+    font-size: 22px;
+    font-weight:700;
+    color: black;
+    margin: 0;
+}
+
+.product-lot-text {
+    color: #7C7C7C;
+    font-size: 14px;
+    margin: 0;
+}
+
+.quantity-area{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.quantity-area p{
+    color: #7C7C7C;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.quantity-counter {
+    width: 90px;
+    height: 20px;
+    background-color: #E2E2E2;
+    margin-left: 10px;
+    border-style: none;
+}
+
+/*Botoes Produto*/
+
+.product-button-area{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 10px;
+}
+.button-purple {
+    background-color: #5B2180;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    padding: 16px 31px;
+    text-decoration: none;
+    width: 280px;
+    border: none;
+    margin: 5px;
+}
+
+.button-gray {
+    background-color: #CACACA;
+    border-radius: 10px;
+    color: #5B2180;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    padding: 16px 31px;
+    text-decoration: none;
+    width: 280px;
+    border: none;
+    margin: 5px;
+}
+
+/*Detalhes de Envio*/
+
+.product-details-button-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.delivery-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-title{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding:3px;
+    margin-top: 10px;
+}
+
+.delivery-date {
+    font-size: 14px;
+    color: #7C7C7C;
+    margin: 0px;
+    padding: 3px;
+}
+
+.card {
+    margin: 10px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px;
+    box-shadow: 0px 1px 5px #aaaaaa;
+}
 
     .card img {
         height: 70px;
@@ -449,7 +662,7 @@ body {
 
 .app-header {
     align-items: center;
-    background-color: #1C195D;
+    background-color: #5B2180;
     display: flex;
     flex-direction: column;
     width: 100%;
