@@ -44,10 +44,31 @@ namespace SVC_Supplier.Controllers
         }
 
 
-        public IActionResult Product()
+        public IActionResult Product(int productId)
         {
-            return View();
+            ProductDb productDb;
+
+            using (var context = new SvcSupplierContext())
+            {
+                productDb = context.Products.FirstOrDefault(p => p.Id == productId);
+            }
+
+            ProductModel productModel = new ProductModel()
+            {
+                Id = productDb.Id,
+                Name = productDb.Name,
+                Brand = productDb.Brand,
+                Department = productDb.Department,
+                Description = productDb.Description,
+                Price = productDb.Price,
+                UnitsInLot = productDb.UnitsInLot,
+                ImagePath = productDb.ImagePath
+            };
+
+            return View(productModel);
         }
+
+
 
         public IActionResult Message()
         {

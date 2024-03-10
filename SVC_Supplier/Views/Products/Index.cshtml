@@ -15,9 +15,9 @@
     </section>
     @foreach(var product in Model)
     {
-        <section class="product-card-area">
-            <div class="product-card">
-                
+        <form asp-action="Product" class="product-card-area">
+            <button class="product-card">
+                <input type="hidden" value="@product.Id" name="productId">
                 <img class="product-card-image-area" src="@product.ImagePath"/>
                 <div class="product-card-information-area">
                         <h2>@product.Name</h2>
@@ -45,8 +45,8 @@
                         </div>
                 </div>
 
-            </div>
+            </button>
 
-        </section>
+        </form>
     }
 </div>

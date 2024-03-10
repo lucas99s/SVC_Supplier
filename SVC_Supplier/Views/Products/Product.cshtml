@@ -2,14 +2,15 @@
     ViewData["Title"] = "Produto";
 }
 
-<div>
-    <section class="product-main-banner-area"></section>
+@model ProductModel
 
+<div>
+    <img class="product-main-banner-area" src="@Model.ImagePath" />
     <section class="product-main-information">
-        <h2>Cimento Nacional</h2>
-        <h3>Cimento Nacional</h3>
+        <h2>@Model.Name</h2>
+        <h3>@Model.Brand</h3>
         <h4>Sobre o Produto</h4>
-        <p class="product-avaliation-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="product-avaliation-description">@Model.Description</p>
 
         <div class="product-avaliation">
 
@@ -25,7 +26,7 @@
 
         </div>
 
-        <p class="sold-units-product">1.500 Unidades vendidas</p>
+        <p class="sold-units-product">@Model.SoldUnits Unidades vendidas</p>
 
     </section>
 
@@ -36,8 +37,8 @@
                 <p class="product-pricing">R$</p>
 
                 <div class="product-value">
-                    <p class="product-pricing">249,99</p>
-                    <p class="product-lot-text">/lotes: 12 unidades</p>
+                    <p class="product-pricing">@Model.Price</p>
+                    <p class="product-lot-text">/lotes: @Model.UnitsInLot unidades</p>
                 </div>
 
             </div>
