@@ -249,7 +249,7 @@ body {
     border-radius: 28px;
     border-style: solid;
     border-color: gray;
-    color: #4A067;
+    color: #4A0674;
     width: 95%;
     height: 60px;
     margin: 20px auto 10px auto;
@@ -301,29 +301,520 @@ body {
     padding: 10px;
 }
 
+/* Tela de listagem dos produtos */
 
+/*area de barra de pesquisa - produtos*/
 
+.product-search-bar-area{
+    padding: 20px;
+}
 
-
-    .card {
-        margin: 10px auto;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 25px;
-        box-shadow: 0px 1px 5px #aaaaaa;
+    .product-search-bar-area h1 {
+        margin-top: 30px;
+        color: #4A0674;
+        font-family: "Roboto";
+        font-weight: 600;
     }
 
-    .card img {
-        height: 70px;
-        width: 70px;
+/*area dos cards de produto*/
+
+.product-card-area {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+.product-card {
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 3px gray;
+    color: green;
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    height: 144px;
+    margin: 15px;
+}
+
+.product-card-image-area {
+    background-image: url(/images/product-cimento.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px 0px 0px 10px;
+    height: 100%;
+    width: 140px;
+}
+
+.product-card-information-area {
+
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 240px
+}
+
+.product-card-information-area h2 {
+        font-size: 16px;
+        color: #4A0674;
+
+        margin:0;
+}
+
+.product-card-information-area h3 {
+        font-size: 14px;
+        color: #7C7C7C;
+        margin:0;
+}
+
+.avaliation-subarea {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 70%;
+}
+
+.avaliation-subarea p {
+    color: #7C7C7C;
+    font-size: 12px;
+    padding: 5px;
+    margin: 0;
+ }
+
+.star-icon {
+    height: auto;
+    width: 8px;
+}
+
+.sold-units {
+    color: #7C7C7C;
+    font-size: 12px;
+    padding: 3px;
+    margin:0;
+}
+
+.price-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.pricing{
+    padding:5px ;
+    font-size: 16px;
+    color: black;
+    margin:0;
+}
+
+.lot-text {
+    color: #7C7C7C;
+    font-size: 15px;
+    margin: 0;
+    padding-top:5px;
+}
+
+/*Página de pedidos ativos*/
+.finished-orders{
+    padding: 20px;
+}
+.finished-orders h1 {
+    margin-top: 30px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.finished-orders p{
+    display:flex;
+    justify-content: center;
+    padding:10px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+/*Página de detalhes do Produto*/
+
+.product-main-banner-area {
+    height: 250px;
+    width: auto;
+    background-image: url(/images/product-cimento.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.product-main-information{
+    padding: 20px;
+}
+
+.product-main-information h2 {
+    font-size: 23px;
+    color: #4A0674;
+    margin: 0;
+}
+
+.product-main-information h3 {
+    font-size: 18px;
+    color: #7C7C7C;
+    margin-bottom: 15px;
+}
+
+.product-main-information h4 {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-avaliation {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.avaliation-title{
+    padding: 10px;
+    margin:0px;
+    color: black;
+    font-weight: 600;
+
+}
+
+.product-avaliation-description {
+    color: black;
+    font-size: 15px;
+    padding: 0px 10px 0px 0px;
+    margin: 0;
+}
+
+.product-star-icon {
+    height: auto;
+    width: 14px;
+    padding-top: 15px;
+}
+
+.sold-units-product {
+    color: gray;
+    font-size: 17px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/*Area de preço e botoes*/
+
+.pricing-and-options-area{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+    height: auto;
+}
+
+.price-and-quantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-pricing-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.product-value{
+    display:flex;
+    flex-direction: column;
+}
+
+.product-pricing {
+    padding: 5px;
+    font-size: 22px;
+    font-weight:700;
+    color: black;
+    margin: 0;
+}
+
+.product-lot-text {
+    color: #7C7C7C;
+    font-size: 14px;
+    margin: 0;
+}
+
+.quantity-area{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.quantity-area p{
+    color: #7C7C7C;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.quantity-counter {
+    width: 90px;
+    height: 20px;
+    background-color: #E2E2E2;
+    margin-left: 10px;
+    border-style: none;
+}
+
+/*Botoes Produto*/
+
+.product-button-area{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 10px;
+}
+.button-purple {
+    background-color: #5B2180;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    padding: 16px 31px;
+    text-decoration: none;
+    width: 280px;
+    border: none;
+    margin: 5px;
+}
+
+.button-gray {
+    background-color: #CACACA;
+    border-radius: 10px;
+    color: #5B2180;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    padding: 16px 31px;
+    text-decoration: none;
+    width: 280px;
+    border: none;
+    margin: 5px;
+}
+
+/*Detalhes de Envio*/
+
+.product-details-button-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.delivery-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-title{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding:3px;
+    margin-top: 10px;
+}
+
+.delivery-date {
+    font-size: 14px;
+    color: #7C7C7C;
+    margin: 0px;
+    padding: 3px;
+}
+
+/* Configuração da Tela de Pagamento*/
+
+.payment-card-area {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+.payment-card-area h1 {
+   
+    padding:15px;
+    margin-right: 150px;
+    font-size: 23px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.payment-product-card {
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 3px gray;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: auto;
+    margin: 15px;
+}
+
+.image-plus-information {
+    display: flex;
+    flex-direction: row;
+    height: 144px;
+}
+
+.payment-card-image-area {
+    background-image: url(/images/product-cimento.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px 0px 0px 10px;
+    height: 144px;
+    width: 140px;
+}
+
+.payment-card-information-area {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 240px;
+    height: 144px;
+}
+
+    .payment-card-information-area h2 {
+        font-size: 16px;
+        color: #4A0674;
+        margin: 0;
     }
 
-    .card h3 {
-        font-size: 35px;
-        margin-left: 20px;
+    .payment-card-information-area h3 {
+        font-size: 14px;
+        color: #7C7C7C;
+        margin: 0;
     }
+
+.payment-quantity-area {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+    .payment-quantity-area p {
+        color: #7C7C7C;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+.payment-quantity-counter {
+    width: 60px;
+    height: 20px;
+    background-color: #E2E2E2;
+    margin-left: 10px;
+    border-style: none;
+}
+
+.payment-avaliation-price{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.payment-price-area{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.total-value {
+    color: #7C7C7C;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.payment-pricing{
+    color: black;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/*Cards de formas de pagamento*/
+
+.payment-forms h1 {
+    margin: 30px;
+    font-size: 23px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.payment-option-card {
+    margin: 10px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:10px;
+    box-shadow: 0px 1px 5px #aaaaaa;
+    width: 375px;
+    margin: 20px;
+}
+
+.payment-option-icons {
+    padding: 10px;
+}
+
+.payment-option-text {
+    display: flex;
+    color: #5B2180;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+/* Página - Envie Sua Mensagem*/
+
+.send-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send-message-title {
+    padding-right: 100px;
+    margin: 25px;
+    font-size: 23px;
+    color: #4A0674;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.send-message-text-area {
+    
+    height: 550px;
+    margin-bottom: 20px;
+    width: 370px;
+
+    border-radius: 10px;
+    border-color: #E2E2E2;
+    border-style: solid;
+}
+
+
+
+.card h3 {
+    font-size: 35px;
+    margin-left: 20px;
+}
 
 .services-container {
     margin: 20px 40px 70px 40px;
@@ -338,7 +829,7 @@ body {
 
 .app-header {
     align-items: center;
-    background-color: #1C195D;
+    background-color: #5B2180;
     display: flex;
     flex-direction: column;
     width: 100%;
