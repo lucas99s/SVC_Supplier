@@ -249,7 +249,7 @@ body {
     border-radius: 28px;
     border-style: solid;
     border-color: gray;
-    color: #4A067;
+    color: #4A0674;
     width: 95%;
     height: 60px;
     margin: 20px auto 10px auto;
@@ -301,8 +301,119 @@ body {
     padding: 10px;
 }
 
+/* Tela de listagem dos produtos */
 
+/*area de barra de pesquisa - produtos*/
 
+.product-search-bar-area{
+    padding: 20px;
+}
+
+    .product-search-bar-area h1 {
+        margin-top: 30px;
+        color: #4A0674;
+        font-family: "Roboto";
+        font-weight: 600;
+    }
+
+/*area dos cards de produto*/
+
+.product-card-area {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 600px;
+}
+
+.product-card {
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 3px gray;
+    color: green;
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    height: 144px;
+    margin: 15px;
+}
+
+.product-card-image-area {
+    background-image: url(/images/product-cimento.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px 0px 0px 10px;
+    height: 100%;
+    width: 140px;
+}
+
+.product-card-information-area {
+
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 240px
+}
+
+.product-card-information-area h2 {
+        font-size: 16px;
+        color: #4A0674;
+
+        margin:0;
+}
+
+.product-card-information-area h3 {
+        font-size: 14px;
+        color: #7C7C7C;
+        margin:0;
+}
+
+.avaliation-subarea {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 70%;
+}
+
+.avaliation-subarea p {
+    color: #7C7C7C;
+    font-size: 12px;
+    padding: 5px;
+    margin: 0;
+ }
+
+.star-icon {
+    height: auto;
+    width: 8px;
+}
+
+.sold-units {
+    color: #7C7C7C;
+    font-size: 12px;
+    padding: 3px;
+    margin:0;
+}
+
+.price-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.pricing{
+    padding:5px ;
+    font-size: 16px;
+    color: black;
+    margin:0;
+}
+
+.lot-text {
+    color: #7C7C7C;
+    font-size: 15px;
+    margin: 0;
+    padding-top:5px;
+}
 
 
     .card {
