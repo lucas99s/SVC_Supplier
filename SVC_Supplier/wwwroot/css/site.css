@@ -15,6 +15,10 @@ body {
     align-items: center;
 }
 
+.body-color-index-signin {
+    background-color: #5B2180;
+}
+
 .button-style {
     background-color: #6DAF6D;
     border-radius: 10px;
@@ -42,7 +46,7 @@ body {
 /* ---AREA DE LOGON --- */
 
 .index-logo-section {
-    background-color: white;
+    background-color: #5B2180;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,13 +55,12 @@ body {
 }
 
 .logo-container {
-    background-color: #1C195D;
+    background-color: #5B2180;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 250px;
-    width: 250px;
+    width: 60%;
 }
 
 .logo {
@@ -69,7 +72,7 @@ body {
 /*Area dos botões*/
 .acess-area {
     align-items: center;
-    background-color: #1C195D;
+    background-color: #5B2180;
     display: flex;
     flex-direction: column;
     height: 55vh;
@@ -92,24 +95,30 @@ body {
 
 /* ---TELA DE LOGIN--- */
 
-.login-logo-section {
-    background-color: #1C195D;
+.login-container{
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    align-content: center;
+}
+.login-logo-section {
+    background-color: white;
+    display: flex;
+    align-items: center;
     justify-content: center;
     height: 45vh;
-    width: 100%;
+    width:60%;
+    margin: auto;
 }
 
 
 .login-form-section {
     align-items: center;
-    background-color: #1C195D;
+    background-color: white;
     display: flex;
     flex-direction: column;
     padding: 10px;
     width: 100%;
-    height: 600px;
+    height: auto;
 }
 
 .login-form-field {
@@ -121,11 +130,11 @@ body {
 
 .login-form-input {
     align-items: center;
-    background-color: white;
+    background-color: #EBEBEB;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    height: 40px;
+    height: 70px;
     margin-bottom: 5%;
     margin-top: 5%;
     padding: 3%;
@@ -137,7 +146,7 @@ body {
 .pwd-recovery {
     margin: 0 auto 0 auto;
     padding: 10px;
-    color: white;
+    color: #C58BE9;
 }
 
 /* LOGIN */
@@ -167,17 +176,23 @@ body {
 
 
 .signin-text {
-    color: white;
+    color: black;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .signin-text-2 {
-    color: black;
+    color: #7C7C7C;
+    font-size: 20px;
+    font-weight:700;
+    font-family: "Roboto";
 }
 
 .signin-form-section {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
 }
 
 .signin-form-field {
@@ -186,15 +201,22 @@ body {
 }
 
 .form-label-style {
-    padding: 15px 0 0px 0;
-    font-weight: 700;
+    padding: 25px 0 0px 0;
+    font-weight: 800;
+    font-family: "Roboto";
 }
 
 .signin-form-field-style {
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     border-color: #e2e2e2;
     border-style: solid;
+}
+
+.signin-button-area{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
 }
 
 .signin-button-style {
@@ -602,6 +624,21 @@ body {
     margin: 5px;
 }
 
+.button-white {
+    background-color: white;
+    border-radius: 10px;
+    color: #5B2180;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    padding: 16px 31px;
+    text-decoration: none;
+    width: 280px;
+    border: none;
+    margin: 5px;
+    text-align: center;
+}
+
 /*Detalhes de Envio*/
 
 .product-details-button-area{
@@ -809,6 +846,48 @@ body {
     border-style: solid;
 }
 
+.sell-container{
+    padding: 30px;
+}
+.sell-container h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #4A0674;
+    font-family: "Roboto";
+     font-weight: 800;
+    }
+
+.sell-card-alignment{
+    display: flex;
+    justify-content: center;
+}
+
+.sell-option-card {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 1px 5px #aaaaaa;
+    width: 390px;
+    height: 90px;
+}
+
+.sell-option-icons {
+    padding: 10px;
+}
+
+.sell-option-text {
+    display: flex;
+    color: #5B2180;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 20px;
+    
+    align-items: center;
+    margin: 0px;
+}
+
 
 
 .card h3 {
@@ -931,21 +1010,29 @@ body {
     color: black;
 }
 
-    .footer-navbar a:hover {
-        text-decoration: none;
-    }
+.footer-navbar a:hover {
+    text-decoration: none;
+}
 
 /* PROFILE */
+
+.profile-title{
+    color: #7c7c7c;
+    font-size: 20px;
+    font-weight: 700;
+}
 
 .menu-option {
     height: 60px;
     display: flex;
     align-items: center;
     border-top: 1px solid #aaaaaa;
+    color: black;
+    text-decoration: none;a
 }
 
-    .menu-option img {
-        position: absolute;
-        right: 40px;
-        height: 16px;
-    }
+.menu-option img {
+    position: absolute;
+    right: 40px;
+    height: 16px;
+}

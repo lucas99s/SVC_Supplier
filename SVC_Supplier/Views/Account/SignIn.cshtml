@@ -1,7 +1,5 @@
 ﻿@model SVC_Supplier.Models.UserModel;
-@{
-    Layout = null;
-}
+
 
 <!DOCTYPE html>
 
@@ -14,28 +12,19 @@
 </head>
 <body>
 
-    <div class="app-header">
-
-        <div class="app-nav">
-            <a class="return-icon" href="~/Account/Index">
-                <img src="~/images/return-simbol.png"/>
-            </a>
-            <img class="simple-logo" src="~/images/logo-simple.svg"/>
-        </div>
-
-        <p class="signin-text">Bem vindo(a)!</p>
-
-    </div>
 
     <div class="signin-form-section">
+
+        <p class="signin-text">Bem vindo!</p>
+
         <p class="signin-text-2">Para realizar seu cadastro, preencha os dados abaixo</p>
 
         <form action="/Account/SignIn" method="post" class="signin-form-field">
-            <label class="form-label-style">Nome</label>
-            <input class="signin-form-field-style" type="text" placeholder="Informe seu nome" asp-for="Name" />
+            <label class="form-label-style">Nome da Empresa</label>
+            <input class="signin-form-field-style" type="text" placeholder="Informe o nome da empresa" asp-for="Name" />
 
-            <label class="form-label-style">Sobrenome</label>
-            <input class="signin-form-field-style" type="text" placeholder="Informe seu sobrenome" asp-for="SurName" />
+            <label class="form-label-style">CNPJ</label>
+            <input class="signin-form-field-style" type="text" placeholder="Informe O CNPJ da Empresa" asp-for="SurName" />
             
             <label class="form-label-style">E-mail</label>
             <input class="signin-form-field-style" type="email" placeholder="Informe seu e-mail" asp-for="Email" />
@@ -54,7 +43,11 @@
             {
                 <span class="text-danger">@ViewBag.PasswordMessage</span>
             }
-            <input class="signin-button-style" type="submit" value="Registrar" />
+
+            <div class="signin-button-area">
+                <input class="button-purple" type="submit" value="Registrar" />
+            </div>
+            
         </form>
     </div>
 
