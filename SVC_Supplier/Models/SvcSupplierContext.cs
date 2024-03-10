@@ -7,6 +7,7 @@ namespace SVC_Supplier.Models
     {
         public DbSet<UserDb> Users { get; set; }
         public DbSet<ProductDb> Products { get; set; }
+        public DbSet<OrderDb> Orders { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             string workingDirectory = Directory.GetCurrentDirectory();

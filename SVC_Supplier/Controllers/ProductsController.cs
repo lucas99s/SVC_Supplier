@@ -111,6 +111,7 @@ namespace SVC_Supplier.Controllers
         }
         public IActionResult DataPaymentForm()
         {
+
             return View();
         }
 
