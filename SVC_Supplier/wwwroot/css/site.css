@@ -628,16 +628,18 @@ body {
 
 .quantity-area p{
     color: #7C7C7C;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     margin: 0px;
 }
 
 .quantity-counter {
     width: 90px;
-    height: 20px;
+    height: 25px;
+ 
     background-color: #E2E2E2;
     margin-left: 10px;
+
     border-style: none;
 }
 
