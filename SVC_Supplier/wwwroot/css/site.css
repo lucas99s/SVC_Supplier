@@ -42,6 +42,22 @@ body {
     display: none;
 }
 
+.back-arrow{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.arrow-image{
+    margin-right: 10px;
+}
 
 /* ---AREA DE LOGON --- */
 
@@ -638,6 +654,7 @@ body {
     font-weight: 600;
     height: 60px;
     padding: 16px 31px;
+    text-align: center;
     text-decoration: none;
     width: 280px;
     border: none;
@@ -654,6 +671,7 @@ body {
     font-weight: 600;
     height: 60px;
     padding: 16px 31px;
+    text-align: center;
     text-decoration: none;
     width: 280px;
     border: none;
@@ -668,6 +686,7 @@ body {
     font-weight: 600;
     height: 60px;
     padding: 16px 31px;
+    text-align: center;
     text-decoration: none;
     width: 280px;
     border: none;
