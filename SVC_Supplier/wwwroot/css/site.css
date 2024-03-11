@@ -216,11 +216,15 @@ body {
     border-style: solid;
 }
 
-.signin-button-area{
-    display: flex;
-    justify-content: center;
-    padding: 30px;
+.signin-form-field-style:focus {
+        outline-color: #5B2180;
 }
+
+    .signin-button-area {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
 
 .signin-button-style {
     background-color: #1C195D;
@@ -869,14 +873,67 @@ body {
     align-items: center;
 }
 
-/*Pagina de confirmação do pagamento*/
+/*Formulario de pagamento*/
 
-.payment-confirmation-screen{
-    display:flex;
+.pform-titles {
+    padding: 15px;
+    margin: 0px;
+    font-size: 23px;
+    color: #5B2180;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.delivery-info-section {
+    padding: 5px 30px 5px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.number-zipcode {
+    display: flex;
+    flex-direction: row;
+}
+
+.number-field .zipcode-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.number-form-field-style {
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    margin-right: 10px;
+    width: 150px;
+}
+
+.number-form-field-style:focus {
+    outline-color: #5B2180;
+}
+
+.creditcard-info-section {
+    padding: 5px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.datecode-field {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*Pagina de confirmação do pagamento*/
+.payment-confirmation-screen {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    margin:20px;
+    margin: 20px;
 }
 
 
