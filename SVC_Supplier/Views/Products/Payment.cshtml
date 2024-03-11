@@ -25,7 +25,7 @@
 
                     <div class="payment-quantity-area">
                         <p>Quantidade:</p>
-                        <input class="payment-quantity-counter" type="text" />
+                        <input class="payment-quantity-counter" type="text" value="@Model.Quantity" />
                     </div>
 
                     <p class="lot-text">/lotes: @Model.UnitsInLot unidades</p>
@@ -79,7 +79,7 @@
     </section>
 
     <section class="product-button-area">
-        <a href="@Url.Action("DataPaymentForm", "Products", new { productId = Model.Id })" class="button-purple" onclick="realizarPagamento()">Realizar Pagamento</a>
+        <a href="@Url.Action("DataPaymentForm", "Products", new { productId = Model.Id, Quantity = Model.Quantity })" class="button-purple" onclick="realizarPagamento()">Realizar Pagamento</a>
     </section>
 
 </div>

@@ -2,48 +2,35 @@
     ViewData["Title"] = "Pedidos";
 }
 
-<a class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
-
-@model List<ProductModel>
+@model List<OrderModel>
 
 <div>
     
-    @foreach (var product in Model)
-    {
-        <form asp-action="Product" class="product-card-area">
-            <button class="product-card">
-                <input type="hidden" value="@product.Id" name="productId">
-                <img class="product-card-image-area" src="@product.ImagePath" />
-                <div class="product-card-information-area">
-                    <h2>@product.Name</h2>
-                    <h3>@product.Brand</h3>
+    <section class="finished-orders">
+        <h1>Pedidos ativos</h1>
+        @foreach (var order in Model)
+        {
+            <form asp-action="OrderDetails" class="product-card-area">
+                <button class="product-card">
+                    <input type="hidden" value="@order.Product.Id" name="productId">
+                    <input type="hidden" value="@order.Quantity" name="quantity">
+                    <img class="product-card-image-area" src="@order.Product.ImagePath" />
+                    <div class="product-card-information-area">
+                        <h2>@order.Product.Name</h2>
+                        <h3>@order.Product.Brand</h3>
 
-                    <div class="avaliation-subarea">
+                        <p class="sold-units">@order.Quantity lotes</p>
 
-                        <p>Avaliações</p>
-                        <div>
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
-                            <img class="star-icon" src="/images/star-icon.svg" />
+                        <div class="price-area">
+                            <p class="pricing">R$ @order.Product.Price</p>
                         </div>
-
                     </div>
 
-                    <p class="sold-units">@product.SoldUnits Unidades vendidas</p>
+                </button>
 
-                    <div class="price-area">
-                        <p class="pricing">R$</p>
-                        <p class="pricing">@product.Price</p>
-                        <p class="lot-text">/lotes: @product.UnitsInLot unidades</p>
-                    </div>
-                </div>
-
-            </button>
-
-        </form>
-    }
+            </form>
+        }
+    </section>
 
     <section class="finished-orders">
         <h1>Pedidos Pendentes</h1>
