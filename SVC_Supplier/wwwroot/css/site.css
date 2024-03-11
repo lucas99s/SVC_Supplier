@@ -55,9 +55,13 @@ body {
     font-weight: 600;
 }
 
-.arrow-image{
-    margin-right: 10px;
+.back-arrow:hover{
+    color: white;
 }
+
+    .arrow-image {
+        margin-right: 10px;
+    }
 
 /* ---AREA DE LOGON --- */
 
