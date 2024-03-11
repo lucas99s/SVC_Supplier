@@ -2,9 +2,9 @@
     ViewData["Title"] = "Pagamento";
 }
 
-<a class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
-
 @model ProductModel
+
+<a href="@Url.Action("Product", "Products", new { productId = Model.Id} )" class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
 
 <div>
     
@@ -24,8 +24,7 @@
                     <h3>@Model.Brand</h3>
 
                     <div class="payment-quantity-area">
-                        <p>Quantidade:</p>
-                        <input class="payment-quantity-counter" type="text" value="@Model.Quantity" />
+                        <p>Quantidade: @Model.Quantity</p>
                     </div>
 
                     <p class="lot-text">/lotes: @Model.UnitsInLot unidades</p>

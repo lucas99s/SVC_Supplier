@@ -2,7 +2,15 @@
     ViewData["Title"] = "Pagamento";
 }
 
+@model OrderModel
+
+<a href="@Url.Action("Payment", "Products", new { productId = Model.ProductId, quantity = Model.Quantity } )" class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
+
+
 <form asp-action="BuyItems" asp-controller="Products">
+
+    <input name="productId" type="hidden" value="@Model.ProductId"/>
+    <input name="quantity" type="hidden" value="@Model.Quantity"/>
 
     <section class="delivery-info-section">
         <h3 class="pform-titles">Dados de entrega</h3>

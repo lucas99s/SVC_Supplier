@@ -2,7 +2,7 @@
     ViewData["Title"] = "Detalhes do pedido";
 }
 
-<a class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
+<a href="@Url.Action("Orders", "Products")" class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
 
 @model ProductModel
 
@@ -46,8 +46,7 @@
             </div>
 
             <div class="quantity-area">
-                <p>Quantidade:</p>
-                <input class="quantity-counter" type="text" value="@Model.Quantity" />
+                <p>Quantidade: @Model.Quantity</p>
             </div>
         </div>
 
@@ -58,7 +57,7 @@
 
             
         <div class="product-button-area">
-           <button class="button-gray" type="button">Enviar Mensagem</button>
+           <a href="@Url.Action("Message", "Products")" class="button-gray" type="button">Enviar Mensagem</a>
         </div>
             
 

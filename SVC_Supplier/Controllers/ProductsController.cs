@@ -18,7 +18,7 @@ namespace SVC_Supplier.Controllers
                 if (!String.IsNullOrEmpty(searchString))
                 {
                     string searchLower = searchString.ToLower();
-                    products = products.Where(s => s.Name.ToLower().Contains(searchLower) || s.Brand.ToLower().Contains(searchLower));
+                    products = products.Where(s => s.Name.ToLower().Contains(searchLower) || s.Brand.ToLower().Contains(searchLower) || s.Department.ToLower().Contains(searchLower));
                 }
 
                 productDbList = products.ToList();
@@ -171,34 +171,26 @@ namespace SVC_Supplier.Controllers
         }
         public IActionResult DataPaymentForm(OrderModel order)
         {
+            return View(order);
+        }
+
+        public IActionResult BuyItems(int productId, int quantity, string address, int number, string zipCode, string cardNumber, string nameOnCard, string validDate, int code)
+        {
             using (var db = new SvcSupplierContext())
             {
 
                 var newOrder = new OrderDb
                 {
-                    ProductId = order.ProductId,
-                    Status = "sa",
-                    Quantity = order.Quantity
+                    ProductId = productId,
+                    Status = "Ativo",
+                    Quantity = quantity
                 };
 
                 db.Add(newOrder);
                 db.SaveChanges();
 
             }
-            return View(order);
-        }
-
-        public IActionResult BuyItems(
-            string address,
-            int number,
-            string zipCode,
-            string cardNumber,
-            string nameOnCard,
-            string validDate,
-            int code
-        )
-        {
-            return RedirectToAction("Index");
+            return RedirectToAction("PaymentConfirmation");
         }
 
         public IActionResult PaymentConfirmation()
