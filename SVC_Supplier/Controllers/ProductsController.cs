@@ -18,7 +18,7 @@ namespace SVC_Supplier.Controllers
                 if (!String.IsNullOrEmpty(searchString))
                 {
                     string searchLower = searchString.ToLower();
-                    products = products.Where(s => s.Name.ToLower().Contains(searchLower) || s.Brand.ToLower().Contains(searchLower));
+                    products = products.Where(s => s.Name.ToLower().Contains(searchLower) || s.Brand.ToLower().Contains(searchLower) || s.Department.ToLower().Contains(searchLower));
                 }
 
                 productDbList = products.ToList();

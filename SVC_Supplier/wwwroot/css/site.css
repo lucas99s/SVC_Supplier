@@ -346,8 +346,7 @@ body {
     }
 
 .option-card {
-     
-    align-items:center;
+    align-items: center;
     align-content: center;
     display: flex;
     flex-direction: column;
@@ -357,7 +356,7 @@ body {
     margin: 12px;
     border-radius: 15px;
     padding: 25px;
-
+    text-decoration: none;
 }
 
 .option-card p1 {
