@@ -3,23 +3,53 @@
 }
 
 <form asp-action="BuyItems" asp-controller="Products">
-    <h3>Dados de entrega</h3>
-    <label for="address">Endereço:</label>
-    <input type="text" placeholder="Endereço" name="address" value="Rua dos Desafortunados" />
-    <label for="number">Número:</label>
-    <input type="text" placeholder="Número" name="number" value="651"/>
-    <label for="zipCode">CEP</label>
-    <input type="text" placeholder="CEP" name="zipCode" value="01225-000" />
 
-    <h3>Cartão</h3>
-    <label for="cardNumber">Número do cartão:</label>
-    <input type="text" placeholder="Número do cartão" name="cardNumber" value="1234 5678 9123 4567" />
-    <label for="nameOnCard">Nome no cartão:</label>
-    <input type="text" placeholder="Nome no cartão:" name="nameOnCard" value="Fulano da Silva" />
-    <label for="validDate">Data de vencimento:</label>
-    <input type="text" placeholder="mm/aa" name="validDate" value="10/28" />
-    <label for="code">Código:</label>
-    <input type="text" placeholder="Código" name="code" value="123" />
+    <section class="delivery-info-section">
+        <h3 class="pform-titles">Dados de entrega</h3>
 
-    <button type="submit">Pagar</button>
+        <label class="form-label-style" for="address">Endereço:</label>
+        <input class="signin-form-field-style" type="text" placeholder="Endereço" name="address" value="Rua dos Desafortunados" />
+        
+        <div class="number-zipcode">
+
+            <div class="number-field">
+                <label class="form-label-style" for="number">Número:</label>
+                <input class="number-form-field-style" type="text" placeholder="Número" name="number" value="651" />
+            </div>
+
+            <div class="zipcode-field">
+                <label class="form-label-style" for="zipCode">CEP</label>
+                <input class="signin-form-field-style" type="text" placeholder="CEP" name="zipCode" value="01225-000" />
+            </div>
+        </div>
+    </section>
+
+    <section class="creditcard-info-section">
+
+    <h3 class="pform-titles">Dados do Cartão</h3>
+
+    <label class="form-label-style" for="cardNumber">Número do cartão:</label>
+    <input class="signin-form-field-style" type="text" placeholder="Número do cartão" name="cardNumber" value="1234 5678 9123 4567" />
+
+     <label class="form-label-style" for="nameOnCard">Nome no cartão:</label>
+    <input class="signin-form-field-style" type="text" placeholder="Nome no cartão:" name="nameOnCard" value="Fulano da Silva" />
+    
+    <div class="datecode-field"> 
+        <div class="date-field">
+            <label class="form-label-style" for="validDate">Data de vencimento:</label>
+            <input class="number-form-field-style" type="text" placeholder="mm/aa" name="validDate" value="10/28" />
+        </div>
+
+        <div class="cardcode-field">
+            <label class="form-label-style" for="code">Código:</label>
+            <input class="signin-form-field-style" type="text" placeholder="Código" name="code" value="123" />
+        </div>
+     </div>
+
+    </section>
+
+    <section class="product-button-area">
+        <button class="button-purple" type="submit">Pagar</button>
+    </section>
+    
 </form>
