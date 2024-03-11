@@ -2,7 +2,8 @@
     ViewData["Title"] = "Produto";
 }
 
-<a class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
+<a href="@Url.Action("Index", "Products")" class="back-arrow"><img class="arrow-image" src="/images/back-icon.png"> Voltar</a>
+
 
 @model ProductModel
 
@@ -57,7 +58,7 @@
                 <input id="quantity" type="hidden" value="" name="quantity" />
                 <button id="btnPost" class="button-purple" onclick="atualizarQuantidade()">Efetuar Pedido</button>
             </form>
-            <button class="button-gray" type="button">Enviar Mensagem</button>
+            <a href="@Url.Action("Message", "Products")" class="button-gray" type="button">Enviar Mensagem</a>
 
         </div>
 

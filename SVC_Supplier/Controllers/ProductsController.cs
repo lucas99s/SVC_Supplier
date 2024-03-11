@@ -171,25 +171,25 @@ namespace SVC_Supplier.Controllers
         }
         public IActionResult DataPaymentForm(OrderModel order)
         {
+            return View(order);
+        }
+
+        public IActionResult BuyItems(int productId, int quantity, string address, int number, string zipCode, string cardNumber, string nameOnCard, string validDate, int code)
+        {
             using (var db = new SvcSupplierContext())
             {
 
                 var newOrder = new OrderDb
                 {
-                    ProductId = order.ProductId,
-                    Status = "sa",
-                    Quantity = order.Quantity
+                    ProductId = productId,
+                    Status = "Ativo",
+                    Quantity = quantity
                 };
 
                 db.Add(newOrder);
                 db.SaveChanges();
 
             }
-            return View(order);
-        }
-
-        public IActionResult BuyItems(string address, int number, string zipCode, string cardNumber, string nameOnCard, string validDate, int code)
-        {
             return RedirectToAction("PaymentConfirmation");
         }
 
