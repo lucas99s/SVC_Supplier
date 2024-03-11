@@ -14,6 +14,7 @@ namespace SVC_Supplier.Models
         public required string UnitsInLot { get; set; }
         public required string ImagePath { get; set; }
         public int SoldUnits { get; set; }
+        public int Quantity { get; set; }
     }
 
     public class ProductDb

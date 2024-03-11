@@ -45,14 +45,15 @@
 
             <div class="quantity-area">
                 <p>Quantidade:</p>
-                <input class="quantity-counter" type="text" />
+                <input id="quantityInput" class="quantity-counter" type="number" value="1"/>
             </div>
         </div>
        
         <div class="product-button-area">
             <form asp-controller="Products" asp-action="Payment">
                 <input type="hidden" value="@Model.Id" name="productId" />
-                <button class="button-purple" type="submit">Efetuar Pedido</button>
+                <input id="quantity" type="hidden" value="" name="quantity" />
+                <button id="btnPost" class="button-purple" onclick="atualizarQuantidade()">Efetuar Pedido</button>
             </form>
             <button class="button-gray" type="button">Enviar Mensagem</button>
 
@@ -60,3 +61,11 @@
 
     </section>
 </div>
+
+<script>
+    function atualizarQuantidade(){
+        let q = document.getElementById('quantityInput').value
+        document.getElementById('quantity').value = q
+        document.getElementById('btnPost').click()
+    }
+</script>

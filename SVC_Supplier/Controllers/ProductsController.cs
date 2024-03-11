@@ -78,15 +78,74 @@ namespace SVC_Supplier.Controllers
 
         public IActionResult Orders()
         {
-            return View();
+            List<OrderDb> orderDbList;
+            List<ProductDb> productDbList;
+
+            using (var context = new SvcSupplierContext())
+            {
+                IQueryable<OrderDb> orders = context.Orders;
+                orderDbList = orders.ToList();
+
+                var productIds = orderDbList.Select(o => o.ProductId).Distinct();
+
+                productDbList = context.Products.Where(p => productIds.Contains(p.Id)).ToList();
+            }
+
+            // Mapear para os modelos
+            List<OrderModel> orderModelList = orderDbList.Select(o =>
+            {
+                var productDb = productDbList.First(p => p.Id == o.ProductId);
+
+                return new OrderModel()
+                {
+                    Id = o.Id,
+                    ProductId = o.ProductId,
+                    Status = o.Status,
+                    Quantity = o.Quantity,
+                    Product = new ProductModel()
+                    {
+                        Id = productDb.Id,
+                        Name = productDb.Name,
+                        Brand = productDb.Brand,
+                        Department = productDb.Department,
+                        Description = productDb.Description,
+                        Price = productDb.Price * o.Quantity,
+                        UnitsInLot = productDb.UnitsInLot,
+                        ImagePath = productDb.ImagePath
+                    }
+                };
+            }).ToList();
+
+            return View(orderModelList);
         }
 
-        public IActionResult OrderDetails()
+
+        public IActionResult OrderDetails(int productId, int quantity)
         {
-            return View();
+            ProductDb productDb;
+
+            using (var context = new SvcSupplierContext())
+            {
+                productDb = context.Products.FirstOrDefault(p => p.Id == productId);
+            }
+
+            ProductModel productModel = new ProductModel()
+            {
+                Id = productDb.Id,
+                Name = productDb.Name,
+                Brand = productDb.Brand,
+                Department = productDb.Department,
+                Description = productDb.Description,
+                Price = productDb.Price * quantity,
+                UnitsInLot = productDb.UnitsInLot,
+                ImagePath = productDb.ImagePath,
+                Quantity = quantity
+            };
+
+            return View(productModel);
         }
 
-        public IActionResult Payment(int productId)
+        public IActionResult Payment(int productId, int quantity)
         { 
             ProductDb productDb;
 
@@ -102,17 +161,31 @@ namespace SVC_Supplier.Controllers
                 Brand = productDb.Brand,
                 Department = productDb.Department,
                 Description = productDb.Description,
-                Price = productDb.Price,
+                Price = productDb.Price * quantity,
                 UnitsInLot = productDb.UnitsInLot,
-                ImagePath = productDb.ImagePath
+                ImagePath = productDb.ImagePath,
+                Quantity = quantity
             };
 
             return View(productModel);
         }
-        public IActionResult DataPaymentForm()
+        public IActionResult DataPaymentForm(OrderModel order)
         {
+            using (var db = new SvcSupplierContext())
+            {
 
-            return View();
+                var newOrder = new OrderDb
+                {
+                    ProductId = order.ProductId,
+                    Status = "sa",
+                    Quantity = order.Quantity
+                };
+
+                db.Add(newOrder);
+                db.SaveChanges();
+
+            }
+            return View(order);
         }
 
         public IActionResult BuyItems(
