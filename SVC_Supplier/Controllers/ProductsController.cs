@@ -188,17 +188,9 @@ namespace SVC_Supplier.Controllers
             return View(order);
         }
 
-        public IActionResult BuyItems(
-            string address,
-            int number,
-            string zipCode,
-            string cardNumber,
-            string nameOnCard,
-            string validDate,
-            int code
-        )
+        public IActionResult BuyItems(string address, int number, string zipCode, string cardNumber, string nameOnCard, string validDate, int code)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("PaymentConfirmation");
         }
 
         public IActionResult PaymentConfirmation()
