@@ -8,6 +8,10 @@ namespace SVC_Supplier.Models
         public required int ProductId { get; set; }
         public required string Status { get; set; }
         public int Quantity { get; set; }
+        public string Address { get; set; }
+        public int Number {  get; set; }
+        public string ZipCode { get; set; }
+        public int UserId { get; set; }
         public ProductModel Product { get; set; }
     }
 
@@ -21,6 +25,9 @@ namespace SVC_Supplier.Models
         public required string Status { get; set; }
         [Required]
         public required int Quantity { get; set; }
-
+        public string Address { get; set; }
+        public int Number { get; set; }
+        public string ZipCode { get; set; }
+        public int UserId { get; set; }
     }
 }

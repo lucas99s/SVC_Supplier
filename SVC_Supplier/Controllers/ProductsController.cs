@@ -178,12 +178,15 @@ namespace SVC_Supplier.Controllers
         {
             using (var db = new SvcSupplierContext())
             {
-
                 var newOrder = new OrderDb
                 {
+                    UserId = (int)HttpContext.Session.GetInt32("UserID"),
                     ProductId = productId,
                     Status = "Ativo",
-                    Quantity = quantity
+                    Quantity = quantity,
+                    Address = address,
+                    Number = number,
+                    ZipCode = zipCode
                 };
 
                 db.Add(newOrder);

@@ -93,6 +93,7 @@ namespace SVC_Supplier.Controllers
                     if (existingUser.Password == user.Password)
                     {
                         HttpContext.Session.SetString("UserName", existingUser.Name);
+                        HttpContext.Session.SetInt32("UserID", existingUser.Id);
                         return RedirectToAction("Index", "Home");
                     }
                     else
